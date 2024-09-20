@@ -1,0 +1,55 @@
+@use 'react-big-calendar/lib/sass/styles.scss' with (
+  $event-bg: transparent,
+);
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+@media only screen and (min-width: 752px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+.fk-flex-grow {
+  flex-grow: 1;
+}
+
+#fc_frame, #fc_frame.fc-widget-normal {
+  z-index: 1199 !important;
+}
+
+::selection {
+  color: #fff;
+  background: #00b4d5;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: #bbb;
+}
